@@ -183,6 +183,11 @@ header {
   font-weight: 600;
   font-size: 1.8rem;
 }
+.slide-area .slide-2 .slide2-content button:hover {
+  background-color: #00D1D2;
+  transform: 0.25s;
+  
+}
 .slide-area .slide-3 {
   background-image: url(../../assets/image/slide-3.png);
   background-repeat: no-repeat;
@@ -520,6 +525,14 @@ header {
 }
 .home-product .products-wrap .product .span-area {
   margin-top: 4rem;
+  
+}
+.home-product .products-wrap .product .span-area i {
+  
+}
+.home-product .products-wrap .product .span-area i:hover {
+  margin-left: 1rem;
+  transition: all 0.5s;
 }
 .home-product .products-wrap .product .span-area span {
   font-size: 18px;
