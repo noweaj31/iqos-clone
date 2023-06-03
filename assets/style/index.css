@@ -170,10 +170,13 @@ header {
   font-weight: 600;
   line-height: 125%;
 }
+.slide-area .slide-2 .slide2-content h5:nth-of-type(2) {
+  margin-bottom: 6.6rem;
+}
 .slide-area .slide-2 .slide2-content h5:nth-of-type(1) {
   margin-top: 4rem;
 }
-.slide-area .slide-2 .slide2-content button {
+.slide-area .slide-2 .slide2-content a {
   background-color: #fff;
   color: #34303d;
   padding: 1.6rem 3.4rem;
@@ -182,11 +185,27 @@ header {
   border-radius: 100px;
   font-weight: 600;
   font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
 }
-.slide-area .slide-2 .slide2-content button:hover {
-  background-color: #00D1D2;
-  transform: 0.25s;
-  
+.slide-area .slide-2 .slide2-content a:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
+}
+.slide-area .slide-2 .slide2-content a::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #00D1D2;
+  width: 120%;
+  height: 120%;
+  z-index: 0;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 0;
+   
+
 }
 .slide-area .slide-3 {
   background-image: url(../../assets/image/slide-3.png);
@@ -249,6 +268,7 @@ header {
   border-radius: 100%;
   position: absolute;
   background-color: #34303d;
+  box-shadow: 30px 0 #34303d, 60px 0 #34303d, 90px 0 #34303d;
 }
 .slide-area .slide-3 .slide3-content button {
   background-color: #34303d;
@@ -326,6 +346,7 @@ header {
   border-radius: 100%;
   position: absolute;
   background-color: #34303d;
+  box-shadow: 30px 0 #34303d, 60px 0 #34303d, 90px 0 #34303d;
 }
 .slide-area .slide-4 .slide4-content button {
   background-color: #34303d;
@@ -528,9 +549,9 @@ header {
   
 }
 .home-product .products-wrap .product .span-area i {
-  
+  font-size: 1.8rem;
 }
-.home-product .products-wrap .product .span-area i:hover {
+.home-product .products-wrap .product .span-area span:hover {
   margin-left: 1rem;
   transition: all 0.5s;
 }
@@ -540,9 +561,7 @@ header {
   color: #3f4053;
   font-weight: 700;
 }
-.home-product .products-wrap .product .span-area a {
-  font-size: 1.8rem;
-}
+
 .home-product .products-wrap .img-area {
   width: 50%;
 }
