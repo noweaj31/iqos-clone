@@ -156,6 +156,30 @@ header {
 }
 
 /* slide-area */
+.arrow-slider .prev {
+  position: absolute;
+  top: 50%;
+  left: 10rem;
+  z-index: 1;
+}
+.arrow-slider .next {
+  position: absolute;
+  top: 50%;
+  right: 10rem;
+  z-index: 1;
+}
+.arrow-slider i {
+  font-size: 3.5rem;
+  color: #fff;
+}
+.arrow-slider i:hover {
+  transition: all 0.3s;
+  color: #34303d;
+}
+.slide-area {
+  position: relative;
+  z-index: 0;
+}
 .slide-area .slide-1 {
   background-image: url(../../assets/image/slide-1.webp);
   width: 100%;
@@ -226,7 +250,6 @@ header {
   transform: translate(-10%, -50%) skew(-30deg);
   opacity: 1;
 }
-
 
 .slide-area .slide-3 {
   background-image: url(../../assets/image/slide-3.png);
@@ -558,21 +581,47 @@ header {
 }
 .video-area .video-content {
   width: 50%;
+  padding-bottom: 56.25%;
+  position: relative;
 }
+.video-area .video-content img {
+  position: absolute;
+  
+}
+.video-area .video-content .video-btn {
+  position: absolute;
+  width: 9.1rem;
+  height: 5.1rem;
+  background-color: #307BF6;
+  top: 50%;
+  left: 50%;
+
+}
+.video-area .video-content .video-btn i {
+  font-size: 4rem;
+  color: #fff;
+ 
+}
+.video-area .video-content .video-btn:hover {
+  background-color: rgba(48,123,246,0.85);
+}
+
 .video-area .video-content video {
   width: 100%;
-  height: 34.3rem;
+  height: 100%;
 }
 
 .video-area .iluma-int {
   width: 50%;
   height: 55rem;
   background-color: #f6f4f0;
-  display: flex;
-  flex-direction: column;
+  
   background-repeat: no-repeat;
   padding-left: 8rem;
   justify-content: center;
+}
+.video-area .iluma-int div {
+
 }
 .video-area .iluma-int h2 {
   color: #3f4053;
@@ -593,22 +642,39 @@ header {
 .video-area .iluma-int p:nth-of-type(1) {
   margin-top: 4rem;
 }
-.video-area .iluma-int button {
-  margin-top: 6rem;
-  text-align: left;
-}
-.video-area .iluma-int button a {
-  padding: 1.6rem 3.4rem;
+.video-area .iluma-int a {
+  background-color: #34303d;
   color: #fff;
-  border: 2px solid transparent;
-  background-color: #3f4053;
+  padding: 1.6rem 3.4rem;
   border: 2px solid #34303d;
+  margin-top: 5rem;
   border-radius: 100px;
-  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 100%;
+  font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
+  display: inline;
+  overflow: hidden;
+  z-index: 0;
 }
+.video-area .iluma-int a::after {
+  content: "";
 
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #00d1d2;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 1;
+}
+.video-area .iluma-int a:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
+}
 /* home-product */
 
 .home-product {
