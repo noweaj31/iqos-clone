@@ -581,9 +581,15 @@ header {
 }
 .video-area .video-content {
   width: 50%;
-  padding-bottom: 56.25%;
   position: relative;
 }
+
+.video-test {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
 .video-area .video-content img {
   position: absolute;
   
@@ -595,12 +601,17 @@ header {
   background-color: #307BF6;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 .video-area .video-content .video-btn i {
+  position: absolute;
   font-size: 4rem;
   color: #fff;
- 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 .video-area .video-content .video-btn:hover {
   background-color: rgba(48,123,246,0.85);
@@ -609,13 +620,15 @@ header {
 .video-area .video-content video {
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 .video-area .iluma-int {
   width: 50%;
   height: 55rem;
   background-color: #f6f4f0;
-  
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   padding-left: 8rem;
   justify-content: center;
@@ -653,13 +666,12 @@ header {
   font-size: 1.8rem;
   position: relative;
   opacity: 1;
-  display: inline;
+  display: inline-block;
   overflow: hidden;
   z-index: 0;
 }
 .video-area .iluma-int a::after {
   content: "";
-
   position: absolute;
   top: 50%;
   left: 0;
@@ -722,6 +734,10 @@ header {
 }
 .home-product .products-wrap .product .span-area .experiencing:hover {
   padding-right: 1rem;
+  transition: all 0.5s;
+}
+.home-product .products-wrap .product .span-area i:hover {
+  padding-left: 1rem;
   transition: all 0.5s;
 }
 
@@ -812,16 +828,36 @@ header {
   color: #3f4053;
 }
 .new-area .product-btn {
-  margin-top: 6rem;
-  padding: 1.6rem 3.4rem;
-  color: #3f4053;
-  border: 2px solid transparent;
   background-color: #fff;
+  color: #34303d;
+  padding: 1.6rem 3.4rem;
   border: 2px solid #34303d;
+  margin-top: 5rem;
   border-radius: 100px;
-  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 100%;
+  font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 0;
+}
+.new-area .product-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #00d1d2;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 1;
+}
+.new-area .product-btn:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
 }
 
 .system-area {
@@ -856,17 +892,36 @@ header {
   letter-spacing: -0.05em;
 }
 .system-area .system-info .system-btn {
-  padding: 1.6rem 3.4rem;
-  border: 2px solid transparent;
   background-color: #fff;
+  color: #34303d;
+  padding: 1.6rem 3.4rem;
+  border: 2px solid #fff;
+  margin-top: 5rem;
   border-radius: 100px;
-  display: inline-block;
-}
-.system-area .system-info .system-btn a {
-  color: #3f4053;
-  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 100%;
+  font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 0;
+}
+.system-area .system-info .system-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #00d1d2;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 1;
+}
+.system-area .system-info .system-btn:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
 }
 .system-area .system-info .warning {
   font-size: 1rem;
@@ -922,19 +977,37 @@ header {
 .last-section .iluma-benefit .benefit-info h2:nth-of-type(1) {
   color: #fff;
 }
-.last-section .iluma-benefit .benefit-info .bene-btn {
-  padding: 1.6rem 3.4rem;
-  border: 2px solid transparent;
+.last-section .iluma-benefit .benefit-info a {
   background-color: #fff;
+  color: #34303d;
+  padding: 1.6rem 3.4rem;
+  border: 2px solid #fff;
+  margin-top: 5rem;
   border-radius: 100px;
-  display: inline-block;
-  margin-top: 6rem;
-}
-.last-section .iluma-benefit .benefit-info .bene-btn a {
-  color: #3f4053;
-  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 100%;
+  font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 0;
+}
+.last-section .iluma-benefit .benefit-info a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #00d1d2;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 1;
+}
+.last-section .iluma-benefit .benefit-info a:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
 }
 .last-section .iluma-acc {
   margin-top: 20rem;
@@ -968,18 +1041,37 @@ header {
   letter-spacing: -0.01em;
   color: #fff;
 }
-.last-section .iluma-acc .acc-info button {
-  margin-top: 6rem;
-  padding: 1.6rem 3.4rem;
+.last-section .iluma-acc .acc-info a {
+  background-color: #3f4052;
   color: #fff;
-  border: 2px solid transparent;
-  background-color: #3f4053;
+  padding: 1.6rem 3.4rem;
   border: 2px solid #fff;
+  margin-top: 5rem;
   border-radius: 100px;
-  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 100%;
-  width: 207px;
+  font-size: 1.8rem;
+  position: relative;
+  opacity: 1;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 0;
+}
+.last-section .iluma-acc .acc-info a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #00d1d2;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+  transform: translate(-101%, -50%) skew(0deg);
+  opacity: 1;
+}
+.last-section .iluma-acc .acc-info a:hover::after {
+  transform: translate(-10%, -50%) skew(-30deg);
+  opacity: 1;
 }
 
 .last-section .iluma-acc .acc-img {
@@ -990,13 +1082,16 @@ header {
   font-size: 1.4rem;
   line-height: 2.6rem;
   padding: 1.5rem 1rem;
-  border-radius: 1.5rem;
+  border-radius: 3.5rem;
   color: #fff;
   background-color: #000;
   position: fixed;
   bottom: 15px;
   left: 100px;
   font-weight: 700;
+  line-height: 26px;
+  display: inline-block;
+  cursor: pointer;
 }
 .kaka-opinion {
   position: fixed;
