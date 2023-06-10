@@ -156,14 +156,14 @@
           </div>
           <div class="store-img2">
             <img src="./assets/image/iluma-img.png" alt="전담" />
-            </div>
-            <div class="store-q2">
-              <p>
-                점포별 재고 사정에 따라 구매 가능한 제품에 제한이 있을 수
-                있습니다.​
-              </p>
-              <p>자세한 내용은 고객센터에 문의하세요.​</p>
-            </div>
+          </div>
+          <div class="store-q2">
+            <p>
+              점포별 재고 사정에 따라 구매 가능한 제품에 제한이 있을 수
+              있습니다.​
+            </p>
+            <p>자세한 내용은 고객센터에 문의하세요.​</p>
+          </div>
         </div>
       </div>
     </section>
@@ -171,14 +171,21 @@
       <div class="video-area">
         <div class="video-content">
           <div class="video-test">
-            <img src="./assets/image/video-photo.jpeg" alt="비디오섬네일" />
             <video
+              id="videoPlayer"
+              preload="none"
               src="https://pmi.23video.com/64968569/79535299/6aced652814f2582c09abde22f447ef3/video_hd/1-sizzle45smp4-9-video.mp4?referer=https%3A%2F%2Fkr.iqos.com%2F&uuid=b075d2ed-45e2-01bd-a64c-7bba2ec14113"
               controls="controls"
             ></video>
-            <span class="video-btn"
+            <img
+              id="thumbnailImage"
+              src="./assets/image/video-photo.jpeg"
+              alt="비디오섬네일"
+            />
+
+            <button id="playBtn" class="video-btn"
               ><i class="fa-solid fa-caret-right"></i
-            ></span>
+            ></button>
           </div>
         </div>
         <div class="iluma-int">
@@ -446,5 +453,28 @@
       <span class="img"></span>
       <span class="kakaotalk">카카오톡</span>
     </div>
+    <script>
+      const playBtn = document.getElementById("playBtn");
+      const thumbnailImage = document.getElementById("thumbnailImage");
+      const videoPlayer = document.getElementById("videoPlayer");
+
+      playBtn.addEventListener("click", function () {
+        videoPlayer.play(); // 영상 재생
+        thumbnailImage.style.display = "none"; // 썸네일 이미지 숨김
+        playBtn.style.display = "none"; // 버튼 숨김
+      });
+
+      videoPlayer.addEventListener("click", function () {
+        if (videoPlayer.paused) {
+          videoPlayer.play(); // 영상 재생
+          thumbnailImage.style.display = "none"; // 썸네일 이미지 숨김
+          playBtn.style.display = "none"; // 버튼 숨김
+        } else {
+          videoPlayer.pause(); // 영상 일시정지
+          thumbnailImage.style.display = "block"; // 썸네일 이미지 표시
+          playBtn.style.display = "block"; // 버튼 표시
+        }
+      });
+    </script>
   </body>
 </html>
