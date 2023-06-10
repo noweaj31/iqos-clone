@@ -1397,7 +1397,35 @@ header {
     flex-direction: column;
     align-items: center;
   }
-  .system-area .s
+  .system-area .system-info {
+    padding: 5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .system-area .system-info h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .system-area .system-info .system-content {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .system-area .system-info .system-btn {
+    font-size: 1.3rem;
+    line-height: 100%;
+    margin-top: 4rem;
+  }
+  .system-area .system-info .warning {
+    color: #fff;
+    margin: 0;
+    transform: translateY(-70%);
+  }
+  .system-area .img-area {
+    padding-right: 0;
+  }
 }
 
 .last-section {

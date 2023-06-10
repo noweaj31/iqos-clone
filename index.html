@@ -26,9 +26,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <!-- sliding jquery -->
-    <script src="./js/jquery.scrollTo.min.js"></script>
     <script src="./js/custom.js"></script>
-    <link rel="stylesheet" href="./assets/style/font.css" />
     <link rel="stylesheet" href="./assets/style/reset.css" />
     <link rel="stylesheet" href="./assets/style/index.css" />
 
@@ -183,9 +181,9 @@
               alt="비디오섬네일"
             />
 
-            <button id="playBtn" class="video-btn"
-              ><i class="fa-solid fa-caret-right"></i
-            ></button>
+            <button id="playBtn" class="video-btn">
+              <i class="fa-solid fa-caret-right"></i>
+            </button>
           </div>
         </div>
         <div class="iluma-int">
@@ -464,14 +462,14 @@
         playBtn.style.display = "none"; // 버튼 숨김
       });
 
-      videoPlayer.addEventListener("click", function () {
+      videoPlayer.addEventListener("click", function (e) {
+        e.preventDefault();
         if (videoPlayer.paused) {
           videoPlayer.play(); // 영상 재생
           thumbnailImage.style.display = "none"; // 썸네일 이미지 숨김
           playBtn.style.display = "none"; // 버튼 숨김
         } else {
           videoPlayer.pause(); // 영상 일시정지
-          thumbnailImage.style.display = "block"; // 썸네일 이미지 표시
           playBtn.style.display = "block"; // 버튼 표시
         }
       });
