@@ -1206,6 +1206,9 @@ header {
   width: 100%;
   position: relative;
 }
+.new-area .iqos-area-slick {
+  display: none;
+}
 .new-area .iqos-area::after {
   position: absolute;
   content: "";
@@ -1244,6 +1247,67 @@ header {
   color: #3f4053;
 }
 .new-area .iqos-area .iqos-item h2 {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #3f4053;
+}
+.new-area .iqos-arrow-slider {
+  display: none;
+}
+/* slick */
+.new-area .iqos-area-slick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  gap: 8.5rem;
+  width: 100%;
+  position: relative;
+}
+.new-area .iqos-area-slick  {
+  display: none;
+}
+.new-area .iqos-area-slick::after {
+  position: absolute;
+  content: "";
+  height: 32rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f6f4f0;
+  z-index: -1;
+}
+
+.new-area .iqos-area-slick .iqos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-area .iqos-area-slick .iqos-item .new {
+  background: #00d1d2;
+  border-radius: 2px;
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-area .iqos-area-slick .iqos-item img {
+  width: 28rem;
+  height: 28rem;
+}
+.new-area .iqos-area-slick .iqos-item div span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.new-area .iqos-area-slick .iqos-item p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #3f4053;
+}
+.new-area .iqos-area-slick .iqos-item h2 {
   font-size: 2.4rem;
   margin-top: 2rem;
   font-weight: 700;
@@ -1311,11 +1375,49 @@ header {
     font-size: 1.3rem;
   }
 }
+@media screen and (max-width: 779px) {
+  .new-area .iqos-area {
+    display: none;
+  }
+  .new-area {
+    position: relative;
+    z-index: 0;
+  }
+  .new-area .iqos-area-slick {
+    display: inline-block;
+    
+  }
+  .new-area .iqos-arrow-slider {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+  }
+  .new-area .iqos-arrow-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: -35rem;
+  }
+  .new-area .iqos-arrow-slider .next {
+    position: absolute;
+    top: 50%;
+    right: -35rem;
+    
+  }
+  .new-area .iqos-arrow-slider i {
+    font-size: 2rem;
+    
+  }
+  .new-area .iqos-arrow-slider i:hover {
+    transition: all 0.3s;
+    color: #34303d;
+  }
+}
 
 .system-area {
   display: flex;
   background-color: #ffb501;
-  width: 100%;
+  max-width: 100%;
   margin-top: 10rem;
 }
 .system-area .system-info {
@@ -1421,10 +1523,10 @@ header {
   .system-area .system-info .warning {
     color: #fff;
     margin: 0;
-    transform: translateY(-70%);
   }
   .system-area .img-area {
     padding-right: 0;
+    height: auto;
   }
 }
 
@@ -1439,20 +1541,21 @@ header {
   display: flex;
   background-color: #35cbba;
   position: relative;
-  height: 63.5rem;
+  min-height: 63.5rem;
 }
 .last-section .iluma-benefit .benefit-info {
   width: 50%;
   padding: 16.5rem 0 0 17.5rem;
 }
-
+.last-section .iluma-benefit .bene-img {
+  min-height: 37.5rem;
+}
 .last-section .iluma-benefit .bene-img img {
   position: absolute;
   top: 12rem;
   right: 0;
   width: 50%;
   height: 100%;
-  min-height: 37.5rem;
 }
 .last-section .iluma-benefit .benefit-info h2 {
   font-size: 4.8rem;
@@ -1611,4 +1714,34 @@ header {
   line-height: 100%;
   letter-spacing: -0.01em;
   color: #391b1b;
+}
+@media screen and (max-width: 990px) {
+  .last-section .iluma-benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .last-section .iluma-benefit .benefit-info {
+    padding: 7rem 0 0 0;
+    width: 50%;
+    
+  }
+  .last-section .iluma-benefit .benefit-info h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .last-section .iluma-benefit .benefit-info  a {
+    font-size: 1.3rem;
+    margin-top: 4rem;
+  }
+  .last-section .iluma-benefit .bene-img {
+    padding-top: 5rem;
+    
+  }
+  .last-section .iluma-benefit .bene-img img {
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
