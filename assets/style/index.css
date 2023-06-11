@@ -298,9 +298,10 @@ header {
 .slide-area .slide-1 {
   background-image: url(../../assets/image/slide-1.webp);
   max-width: 100%;
-  height: 75rem;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
-  
+  background-size: cover;
 }
 @media screen and (max-width: 990px) {
   .slide-area .slide-1 {
@@ -318,7 +319,6 @@ header {
 }
 .slide-area .slide-2 {
   background-image: url(../../assets/image/slide-2.jpg);
-  min-height: 71rem;
   max-width: 100%;
   height: 75rem;
   background-repeat: no-repeat;
@@ -598,7 +598,7 @@ header {
   background-color: #34303d;
   font-size: 2.4rem;
   color: #fff;
-  margin-right: 55.9rem;
+  
   line-height: 100%;
   align-items: center;
 }
@@ -1119,10 +1119,12 @@ header {
 .home-product .products-wrap {
   background-color: #f6f4f0;
   width: calc((100% - 40px) / 2);
+  min-height: 30rem;
+  padding: 8rem 0 6rem 10rem;
   display: flex;
+  align-items: center;
 }
 .home-product .products-wrap .product {
-  padding: 8rem 0 8rem 10rem;
   width: 50%;
 }
 .home-product .products-wrap .product h2 {
@@ -1165,12 +1167,50 @@ header {
   width: 50%;
 }
 .home-product .products-wrap img {
-  padding: 8rem 0 8rem 10rem;
+  
 }
 @media screen and (max-width: 990px) {
-  .home-product .products-wrap .product {
-    padding: 8rem 0 0rem 10rem;
+  .home-product .products-wrap {
+    width: 100%;
+    padding: 3rem 5rem;
+    align-items: center;
+    min-height: 23rem;
+  }  
+  
+  .home-product .products-wrap:nth-of-type(1) {
+    flex-direction: row-reverse;
+    width: 100%;
   }
+  .home-product .products-wrap:nth-of-type(1) .img {
+    text-align: end;
+  }
+  .home-product .products-wrap:nth-of-type(3) {
+    flex-direction: row-reverse;
+  }
+  .home-product .products-wrap:nth-of-type(2) .product {
+    text-align: end;
+  }
+  .home-product .products-wrap:nth-of-type(4) .product {
+    text-align: end;
+  }
+  .home-product .products-wrap .product h2 {
+    font-size: 1.8rem;
+  }
+  .home-product .products-wrap .product .span-area {
+    font-size: 1.3rem;
+  }
+   .home-product .products-wrap:nth-of-type(2) .product .span-area {
+    font-size: 1.3rem;
+    align-items: end;
+  }
+  .home-product .products-wrap .product p:nth-of-type(1) {
+  margin-top: 2rem;
+}
+.home-product .products-wrap .img-area img {
+  width: 10rem;
+  margin: 0 auto;
+}
+  
 }
 .new-area {
   display: flex;
@@ -1331,7 +1371,7 @@ header {
   z-index: 0;
 }
 .new-area .product-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
@@ -1379,36 +1419,29 @@ header {
   .new-area .iqos-area {
     display: none;
   }
-  .new-area {
-    position: relative;
-    z-index: 0;
-  }
+  
   .new-area .iqos-area-slick {
     display: inline-block;
-    
+    position: relative;
   }
-  .new-area .iqos-arrow-slider {
+  .new-area .iqos-area-slick .iqos-arrow-slider {
     display: inline-block;
     position: absolute;
-    z-index: 1;
+    width: 100% !important;
     top: 50%;
   }
-  .new-area .iqos-arrow-slider .prev {
+  .new-area .iqos-area-slick .iqos-arrow-slider .prev {
     position: absolute;
-    top: 50%;
-    left: -35rem;
+    left: 2rem;
   }
-  .new-area .iqos-arrow-slider .next {
+  .new-area .iqos-area-slick .iqos-arrow-slider .next {
     position: absolute;
-    top: 50%;
-    right: -35rem;
-    
+    right: 2rem;
   }
-  .new-area .iqos-arrow-slider i {
+  .new-area .iqos-area-slick .iqos-arrow-slider i {
     font-size: 2rem;
-    
   }
-  .new-area .iqos-arrow-slider i:hover {
+  .new-area .iqos-area-slick .iqos-arrow-slider i:hover {
     transition: all 0.3s;
     color: #34303d;
   }
@@ -1461,7 +1494,7 @@ header {
   z-index: 0;
 }
 .system-area .system-info .system-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
@@ -1504,6 +1537,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   .system-area .system-info h2 {
     font-size: 2.4rem;
@@ -1523,6 +1557,9 @@ header {
   .system-area .system-info .warning {
     color: #fff;
     margin: 0;
+   position: relative;
+   bottom: -30rem;
+    
   }
   .system-area .img-area {
     padding-right: 0;
