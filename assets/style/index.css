@@ -1182,19 +1182,27 @@ header {
     width: 100%;
   }
   
-  .home-product .products-wrap:nth-of-type(1) .img {
-    text-align: end;
-    
+  .home-product .products-wrap:nth-of-type(1) .img-area {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 3rem;
   }
   .home-product .products-wrap:nth-of-type(3) {
     flex-direction: row-reverse;
+  }
+  .home-product .products-wrap:nth-of-type(3) .img-area {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 3rem;
   }
   .home-product .products-wrap:nth-of-type(2) .product {
     text-align: end;
   }
   .home-product .products-wrap:nth-of-type(2) .product .span-area {
     justify-content: end;
-    
+  }
+  .home-product .products-wrap:nth-of-type(2) .img-area {
+    padding-left: 3rem;
   }
   
   .home-product .products-wrap:nth-of-type(4) .product {
@@ -1203,6 +1211,9 @@ header {
   .home-product .products-wrap:nth-of-type(4) .product .span-area {
     justify-content: end;
     
+  }
+  .home-product .products-wrap:nth-of-type(4) .img-area {
+    padding-left: 3rem;
   }
   .home-product .products-wrap .product h2 {
     font-size: 1.8rem;
@@ -1534,6 +1545,9 @@ header {
   flex-direction: column;
   justify-content: flex-end;
 }
+.system-area .img-area .warning-a {
+  display: none;
+}
 .system-area .img-area img {
   padding-top: 3.6rem;
 }
@@ -1566,15 +1580,25 @@ header {
     margin-top: 4rem;
   }
   .system-area .system-info .warning {
-    color: #fff;
-    margin: 0;
-   position: relative;
-   bottom: -30rem;
+    display: none;
     
   }
   .system-area .img-area {
     padding-right: 0;
     height: auto;
+    position: relative;
+  }
+  .system-area .img-area .warning-a {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32.4rem;
+  }
+  .system-area .img-area img {
+    padding-top: 0;
   }
 }
 
@@ -1769,12 +1793,16 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 69.2rem;
     flex-wrap: wrap;
   }
   .last-section .iluma-benefit .benefit-info {
     padding: 7rem 0 0 0;
     width: 50%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
   .last-section .iluma-benefit .benefit-info h2 {
     font-size: 2.4rem;
@@ -1786,10 +1814,18 @@ header {
   }
   .last-section .iluma-benefit .bene-img {
     padding-top: 5rem;
-    
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
   }
   .last-section .iluma-benefit .bene-img img {
+    max-width: initial;
     width: 100%;
+    height: auto;
     background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
   }
 }
