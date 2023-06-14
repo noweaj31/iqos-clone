@@ -1562,7 +1562,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    width: 100%;
   }
   .system-area .system-info h2 {
     font-size: 2.4rem;
@@ -1788,17 +1788,19 @@ header {
   color: #391b1b;
 }
 @media screen and (max-width: 990px) {
+  .last-section {
+    margin-top: 5rem;
+  }
   .last-section .iluma-benefit {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 69.2rem;
     flex-wrap: wrap;
   }
   .last-section .iluma-benefit .benefit-info {
-    padding: 7rem 0 0 0;
-    width: 50%;
+    padding: 7rem 0 5rem 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1813,8 +1815,7 @@ header {
     margin-top: 4rem;
   }
   .last-section .iluma-benefit .bene-img {
-    padding-top: 5rem;
-    height: auto;
+    /* height: 37.5rem; */
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -1823,9 +1824,47 @@ header {
   .last-section .iluma-benefit .bene-img img {
     max-width: initial;
     width: 100%;
+    min-height: 37.5rem;
     height: auto;
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
+    top: 0;
+  }
+  .last-section .iluma-acc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  .last-section .iluma-acc .acc-info {
+    padding: 5.5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .last-section .iluma-acc .acc-info h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .last-section .iluma-acc .acc-info p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .last-section .iluma-acc .acc-info a {
+    font-size: 1.3rem;
+    margin-top: 4rem;
+  }
+  .last-section .iluma-acc .acc-img {
+    width: 100%;
+  }
+  .last-section .iluma-acc .acc-img img {
+    width: 100%;
+    height: 0 auto;
   }
 }
