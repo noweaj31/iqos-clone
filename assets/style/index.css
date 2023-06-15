@@ -1433,6 +1433,9 @@ header {
   .new-area .product-btn {
     font-size: 1.3rem;
   }
+  .new-area .iqos-area::after {
+    height: 16rem;
+  }
 }
 @media screen and (max-width: 779px) {
   .new-area .iqos-area {
@@ -1442,13 +1445,19 @@ header {
   .new-area .iqos-area-slick {
     display: inline-block;
     position: relative;
+    
   }
+  .new-area .iqos-area-slick::after {
+    height: 16rem;
+  }
+  
   
   .new-area .iqos-area-slick .iqos-arrow-slider {
     display: inline-block;
     position: absolute;
     width: 100% !important;
     top: 50%;
+    z-index: 1;
   }
   .new-area .iqos-area-slick .iqos-arrow-slider .prev {
     display: inline-block;
