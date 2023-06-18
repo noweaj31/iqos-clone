@@ -834,6 +834,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 2.7rem;
+  gap: 3.1rem;
 }
 .con-store-area .con-store-content .store-info .store-btn a {
   background-color: #fff;
@@ -883,6 +884,7 @@ header {
 @media screen and (max-width: 990px) {
   .con-store-area {
     background-image: url(../../assets/image/store-img1.png);
+    margin-top: 3.3rem;
   }
   .con-store-area .con-store-content {
     display: flex;
@@ -1074,6 +1076,7 @@ header {
   .video-area {
     display: flex;
     flex-direction: column;
+    margin-top: 3.3rem;
   }
   .video-area .video-content {
     width: 100%;
@@ -1170,6 +1173,10 @@ header {
   
 }
 @media screen and (max-width: 990px) {
+  .home-product {
+    margin-top: 3.3rem;
+    gap: 1rem;
+  }
   .home-product .products-wrap {
     width: 100%;
     padding: 3rem 5rem;
@@ -1407,6 +1414,9 @@ header {
   opacity: 1;
 }
 @media screen and (max-width: 990px) {
+  .new-area {
+    margin-top: 3.3rem;
+  }
   .new-area .iqos-area {
     padding-top: 4rem;
     gap: 0;
@@ -1438,43 +1448,53 @@ header {
   }
 }
 @media screen and (max-width: 779px) {
+  .new-area {
+    position: relative;
+  }
   .new-area .iqos-area {
     display: none;
   }
   
   .new-area .iqos-area-slick {
     display: inline-block;
-    position: relative;
-    
-  }
+    z-index: 0;
+    }
   .new-area .iqos-area-slick::after {
     height: 16rem;
   }
-  
-  
-  .new-area .iqos-area-slick .iqos-arrow-slider {
+  .new-area .iqos-arrow-slider {
     display: inline-block;
     position: absolute;
     width: 100% !important;
-    top: 50%;
-    z-index: 1;
+    top: 60%;
+    
   }
-  .new-area .iqos-area-slick .iqos-arrow-slider .prev {
+  .new-area .iqos-arrow-slider .prev {
     display: inline-block;
     left: 2rem;
     position: absolute;
+    z-index: 1;
   }
-  .new-area .iqos-area-slick .iqos-arrow-slider .next {
+  .new-area .iqos-arrow-slider .next {
     display: inline-block;
     right: 2rem;
     position: absolute;
+    z-index: 1;
   }
-  .new-area .iqos-area-slick .iqos-arrow-slider i {
+  .new-area .iqos-arrow-slider i {
     font-size: 2rem;
   }
-  .new-area .iqos-area-slick .iqos-arrow-slider i:hover {
+  .new-area .iqos-arrow-slider i:hover {
     transition: all 0.3s;
     color: #34303d;
+  }
+  .new-area .iqos-area-slick .iqos-item p {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+  .new-area .iqos-area-slick .iqos-item h2 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1565,6 +1585,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
   }
   .system-area .system-info {
     padding: 5rem 0 0 0;
@@ -1786,6 +1807,7 @@ header {
 }
 .kaka-opinion .img {
   background-image: url(../../assets/image/icon_kakao_chat.png);
+  
   width: 42px;
   height: 40px;
 }
@@ -1875,5 +1897,31 @@ header {
   .last-section .iluma-acc .acc-img img {
     width: 100%;
     height: 0 auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .kaka-opinion {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    height: 5rem;
+    width: 4.8rem;
+  }
+  .kaka-opinion .img {
+    width: 2.2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .kaka-opinion .kakaotalk {
+    font-size: 1rem;
+  }
+  .opinion {
+    bottom: 1,2rem;
+    left: 1.2rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: 1rem ;
   }
 }
