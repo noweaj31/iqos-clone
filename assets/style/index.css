@@ -1,8 +1,7 @@
 /* header */
 header {
   width: 100%;
-
-  background-color: #fff;
+background-color: #fff;
 }
 .header-area {
   padding: 0 2rem;
@@ -34,7 +33,7 @@ header {
 .header-area .header-content img {
   width: 8rem;
   height: 2.7rem;
-  padding-top: 7px;
+  padding-top: 0.7rem;
 }
 .header-area .header-content .brand-info {
   margin-left: 1rem;
@@ -1927,6 +1926,6 @@ header {
     left: 1.2rem;
     font-size: 1rem;
     border-radius: 2rem;
-    padding: 1rem ;
+    padding: 0.5rem 1rem;
   }
 }
