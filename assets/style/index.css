@@ -1,49 +1,110 @@
 /* header */
 header {
-  width: 100%;
+  width: auto;
 background-color: #fff;
 }
 .header-area {
-  padding: 0 2rem;
+  padding: 1.5rem 2rem;
+  max-width: 1650px;
 }
 .header-area .header-content {
+  padding: 0;
+}
+.header-area .header-content .header-wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2.2rem 0;
+  padding: 0;
 }
 .header-area .header-content .brand-int {
+  width: 40%;
   display: flex;
   font-weight: 700;
+  padding: 0;
 }
-.header-area .header-content .brand-bar {
-  display: none;
+.header-area .header-content .brand-int .menu-list {
+  display: flex;
+  padding: 0;
+}
+.header-area .header-content .brand-int .menu-list li a {
+  padding: 2.2rem 1rem 2.2rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -.05px;
+}
+.header-area .header-content .brand-int .menu-list li:nth-of-type(1) a {
+  padding-left: 0;
 }
 
-.header-area .header-content .brand-int span {
+.header-area .header-content .brand-int .menu-list li a span {
   font-size: 1.4rem;
-  padding: 0 2.5rem;
+    font-weight: 700;
+    letter-spacing: -.05px;
 }
+
 .header-area .header-content .brand-int .brand-story {
   padding-left: 0;
 }
 .header-area .header-content .brand-int i {
   font-size: 1.2rem;
 }
-.header-area .header-content img {
-  width: 8rem;
-  height: 2.7rem;
+/* .header-area .header-content .brand-int div {
+  position: relative;
+}
+.header-area .header-content .brand-int .bottom-wrap {
+  position: absolute;
+  display: block;
+  padding: 2rem;
+  top: 4.7rem;
+  left: 0;
+  width: 100%;
+  
+  background-color: #fff;
+  white-space: nowrap;
+  z-index: 1;
+  border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+}
+.header-area .header-content .brand-int .bottom-area {
+  max-width: 140rem;
+  display: flex;
+  justify-content: space-between;
+  
+} */
+.header-area .header-content .header-logo {
+  width: 20%;
+  text-align: center;
+}
+.header-area .header-content .header-logo a {
+  max-width: 100%;
+  display: block;
+}
+.header-area .header-content .header-logo a img {
+  display: inline-block;
   padding-top: 0.7rem;
 }
+
 .header-area .header-content .brand-info {
-  margin-left: 1rem;
+  width: 40%;
+  text-align: right;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
-.header-area .header-content .brand-info span {
+.header-area .header-content .brand-info .info-menu {
+  margin: 0 0 0 1rem;
+}
+.header-area .header-content .brand-info .info-menu ul {
+  display: flex;
+}
+.header-area .header-content .brand-info .info-menu ul li {
+  margin: 0 0 0 2.2rem;
+}
+.header-area .header-content .brand-info .info-menu ul li a {
+  color: #545454;
+  font-weight: 400;
   font-size: 1.4rem;
-  margin-left: 2.2rem;
 }
+
 .header-area .header-content .brand-info .icon-area {
   margin-left: 6.5rem;
   font-size: 2rem;
