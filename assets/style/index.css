@@ -4,7 +4,7 @@ header {
 background-color: #fff;
 }
 .header-area {
-  padding: 1.5rem 2rem;
+  padding: 0rem 2rem;
   max-width: 1650px;
 }
 .header-area .header-content {
@@ -24,6 +24,9 @@ background-color: #fff;
 .header-area .header-content .brand-int .menu-list {
   display: flex;
   padding: 0;
+}
+.header-area .header-content .brand-int .menu-list .list-area {
+  padding: 2.2rem 0;
 }
 .header-area .header-content .brand-int .menu-list li a {
   padding: 2.2rem 1rem 2.2rem 2.5rem;
@@ -47,17 +50,16 @@ background-color: #fff;
 .header-area .header-content .brand-int i {
   font-size: 1.2rem;
 }
-/* .header-area .header-content .brand-int div {
+.header-area .header-content .brand-int .header-menu .menu-list li {
   position: relative;
 }
 .header-area .header-content .brand-int .bottom-wrap {
   position: absolute;
   display: block;
   padding: 2rem;
-  top: 4.7rem;
+  top: 100%;
   left: 0;
-  width: 100%;
-  
+  width: auto;
   background-color: #fff;
   white-space: nowrap;
   z-index: 1;
@@ -69,7 +71,7 @@ background-color: #fff;
   display: flex;
   justify-content: space-between;
   
-} */
+}
 .header-area .header-content .header-logo {
   width: 20%;
   text-align: center;
