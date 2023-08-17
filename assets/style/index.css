@@ -27,14 +27,16 @@ background-color: #fff;
 }
 .header-area .header-content .brand-int .menu-list .list-area {
   padding: 2.2rem 0;
+  position: relative;
+  
 }
-.header-area .header-content .brand-int .menu-list li a {
+.header-area .header-content .brand-int .menu-list .list-area .brand-story-area {
   padding: 2.2rem 1rem 2.2rem 2.5rem;
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -.05px;
 }
-.header-area .header-content .brand-int .menu-list li:nth-of-type(1) a {
+.header-area .header-content .brand-int .menu-list .list-area:nth-of-type(1) .brand-story-area {
   padding-left: 0;
 }
 
@@ -50,9 +52,7 @@ background-color: #fff;
 .header-area .header-content .brand-int i {
   font-size: 1.2rem;
 }
-.header-area .header-content .brand-int .header-menu .menu-list li {
-  position: relative;
-}
+
 .header-area .header-content .brand-int .bottom-wrap {
   position: absolute;
   display: block;
@@ -66,11 +66,57 @@ background-color: #fff;
   border-top: 1px solid #cecece;
     border-bottom: 1px solid #cecece;
 }
+.header-area .header-content .brand-int .bottom-wrap::before {
+  content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.4rem;
+    left: 0;
+    top: -0.4rem;
+    z-index: 1;
+}
 .header-area .header-content .brand-int .bottom-area {
   max-width: 140rem;
+  margin: 0 auto;
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   
+}
+.header-area .header-content .brand-int .bottom-area .sub-menu {
+  width: 75%;
+  
+}
+.header-area .header-content .brand-int .bottom-area .sub-menu li {
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+.header-area .header-content .brand-int .bottom-area .sub-menu li a {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.header-area .header-content .brand-int .bottom-area .menu-right-area .menu-right-text {
+  display: flex;
+  flex-direction: column;
+}
+.header-area .header-content .brand-int .bottom-area .menu-right-area .menu-right-text h3 {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.header-area .header-content .brand-int .bottom-area .menu-right-area .menu-right-text h3:hover {
+  text-decoration: underline;
+}
+.header-area .header-content .brand-int .bottom-area .menu-right-area .menu-right-text p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #3F4053;
+  margin-bottom: 1rem;
+}
+.header-area .header-content .brand-int .bottom-area .menu-right-area .menu-right-text p:hover {
+  text-decoration: underline;
 }
 .header-area .header-content .header-logo {
   width: 20%;
@@ -1842,13 +1888,13 @@ background-color: #fff;
 .opinion {
   font-size: 1.4rem;
   line-height: 2.6rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 3.5rem;
   color: #fff;
   background-color: #000;
   position: fixed;
-  bottom: 15px;
-  left: 100px;
+  bottom: 40px;
+  left: 40px;
   font-weight: 700;
   line-height: 26px;
   display: inline-block;
