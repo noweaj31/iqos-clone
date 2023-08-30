@@ -15,6 +15,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0;
+  justify-content: space-between;
 }
 .header-area .header-content .brand-int {
   width: 40%;
@@ -43,6 +44,7 @@ header {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.05px;
+  
 }
 .header-area
   .header-content
@@ -64,6 +66,9 @@ header {
 }
 .header-area .header-content .brand-int i {
   font-size: 1.2rem;
+}
+.header-area .header-content .brand-bar {
+  display: none;
 }
 
 .bottom-wrap {
@@ -212,12 +217,14 @@ header {
   color: #545454;
   font-weight: 400;
   font-size: 1.4rem;
+  white-space: nowrap;
 }
 
 .header-area .header-content .brand-info .icon-area {
   margin-left: 6.5rem;
   font-size: 2rem;
   position: relative;
+  white-space: nowrap;
 }
 .header-area .header-content .brand-info .icon-area span {
   background: #00d1d2;
@@ -261,6 +268,14 @@ header {
   }
   .header-area {
     padding: 0 2.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-area .header-content .brand-info .info-menu {
+    display: none;
+  }
+  .header-area .header-content .brand-info {
+    width: auto;
   }
 }
 
