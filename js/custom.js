@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // 슬라이드
   $(".slide-area").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -24,5 +25,14 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  // 네비 메뉴
+  $(".brand-bar").click(function () {
+    $(this).toggleClass("active");
+    $(".navigation-menu").toggleClass("active");
+  });
+  $(".close-btn").click(function () {
+    $(".navigation-menu, .brand-bar").removeClass("active");
   });
 });
