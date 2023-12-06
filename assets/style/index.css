@@ -250,23 +250,27 @@ header {
 }
 
 /* navigation-menu */
-
+.navigation-menu::-webkit-scrollbar {
+  display: none;
+}
 .navigation-menu {
   position: fixed;
-  left: -100%;
+  left: 0;
   top: 0;
   z-index: 102;
-  transition: all 0.3s;
+  transition: transform 0.3s ease-in-out;
   width: 100%;
   max-width: 100%;
   min-width: 24rem;
   background: #f3f3f3;
   height: 100%;
   box-sizing: border-box;
+  overflow-y: auto;
+  transform: translate3d(-100%, 0, 0);
 }
 .navigation-menu.active {
-  left: 0;
-  transition: all 0.3s;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease-in-out;
 }
 .navigation-menu .menu-top {
   display: flex;
@@ -375,8 +379,21 @@ header {
 }
 .navigation-menu .menu-bottom .accordion-menu {
   width: 100%;
-  padding: 3rem 0 1rem 1rem;
+  max-height: 0;
   transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+.navigation-menu .menu-bottom .accordion-menu .accordion-wrap {
+  padding: 3rem 0 1rem 1rem;
+}
+.navigation-menu .menu-bottom .menu-list.is-active .accordion-menu.menu1 {
+  max-height: 13.8rem;
+}
+.navigation-menu .menu-bottom .menu-list.is-active .accordion-menu.menu2 {
+  max-height: 27.8rem;
+}
+.navigation-menu .menu-bottom .menu-list.is-active .accordion-menu.menu3 {
+  max-height: 17.8rem;
 }
 .navigation-menu .menu-bottom .accordion-menu .accordion-wrap {
   max-width: 1480px;
@@ -445,6 +462,12 @@ header {
   }
   .header-area .header-content .brand-bar:hover {
     color: #444444;
+  }
+  .header-area .header-content .brand-info {
+    width: auto;
+  }
+  .header-area .header-content .brand-info .info-menu {
+    display: none;
   }
   .header-area .header-content .brand-info .info-icon {
     display: none;
